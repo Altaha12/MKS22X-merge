@@ -15,7 +15,8 @@ public class Merge{
         int iA=0;
         int iB=0;
         int iC=0;
-        while(iA<aryA.length && iB<aryB.length){
+        while(iC<aryC.length){
+          if(iA<aryA.length&&iB<aryB.length){
             if(aryA[iA]<=aryB[iB]){
                 aryC[iC]=aryA[iA];
                 iA++;
@@ -23,8 +24,18 @@ public class Merge{
             else{
                 aryC[iC]=aryB[iB];
                 iB++;
-                iC++;}
+                iC++;}}
+            else if(iA<aryA.length){
+              aryC[iC]=aryA[iA];
+              iA++;
+              iC++;
             }
+            else if(iB<aryB.length){
+              aryC[iC]=aryB[iB];
+              iB++;
+              iC++;}
+        }
+        System.out.println(Arrays.toString(aryC));
         return aryC;
         }
      public static void main(String []args){
