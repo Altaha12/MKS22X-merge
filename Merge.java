@@ -5,7 +5,7 @@ public class Merge{
         int[] ary1 = new int[ary.length/2];
         int[] ary2 = new int[ary.length-ary.length/2];
         for(int i = 0; i<ary1.length ; i++)ary1[i]=ary[i];
-        for(int i = ary1.length ; i<ary2.length ; i++)ary2[i]=ary[i];
+        for(int i = 0 ; i<ary2.length ; i++)ary2[i]=ary[i+ary1.length];
         return merge(ary1,ary2);
     }
     public static int[] merge(int[] ary1, int[] ary2){
